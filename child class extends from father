@@ -1,0 +1,27 @@
+class father{
+  constructor(name, lastName){
+    this.name = name;
+    this.lastName = lastName;
+}
+//add fullNameMaker function
+fullNameMaker(){
+  console.log(this.name + " " + this.lastName);
+}
+}
+
+class child extends father{
+  constructor(name, lastName, eyeColor){
+    super(name,lastName);
+      this.eyeColor = eyeColor;
+  }
+}
+
+//definition of variables
+let ahmad = new father("Seyed Ahmad", "Gholami")
+let karime = new child("Karime", "gholami", "Green")
+
+ console.log(ahmad)
+ ahmad.fullNameMaker()
+ 
+ console.log(karime)
+ karime.fullNameMaker()
